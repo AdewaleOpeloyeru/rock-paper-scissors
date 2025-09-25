@@ -1,31 +1,4 @@
-import random
-
-class Player():
-    def __init__(self):
-        self.score = 0
-        self.choice = ""
-
-
-class HumanPlayer(Player):
-    def __init__(self):
-        super().__init__()
-
-    def make_choice(self):
-        valid_choices = ['r', 'p', 's']
-        choice = input(f"Rock, paper or scissors [r/p/s]? ").lower()
-        while choice not in valid_choices:
-            print("Invalid choice. Please enter rock(r), paper(p), or scissors(s)")
-            choice = input(f"Rock, paper or scissors [r/p/s]? ").lower()
-        self.choice = choice
-
-
-class ComputerPlayer(Player):
-    def __init__(self):
-        super().__init__()
-
-    def make_choice(self):
-        self.choice = random.choice(['r', 'p', 's'])
-
+from player import HumanPlayer, ComputerPlayer
 
 class Game():
     def __init__(self, rounds=3):
@@ -67,19 +40,3 @@ class Game():
             print("Sorry, you lost the game.")
         else:
             print("The game is a tie!")
-
-def main():
-    print("--- Welcome to Rock, Paper, Scissors Game ---")
-    rounds = input("How many rounds would you like to play? (default is 3): ")
-    if rounds.isdigit():
-        print(f"Number of rounds: {rounds}")
-        rounds = int(rounds)
-    else:
-        print("Invalid input. Setting rounds to default (3).")
-        rounds = 3
-    my_game = Game(rounds)
-    my_game.play()
-    my_game.game_summary()
-
-if __name__ == "__main__":
-    main()
