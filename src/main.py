@@ -1,5 +1,6 @@
 from game import Game
 
+
 def main():
     print("--- Welcome to Rock, Paper, Scissors Game ---")
     rounds = input("How many rounds would you like to play? (default is 3): ")
@@ -12,6 +13,7 @@ def main():
     my_game = Game(rounds)
     my_game.play()
     my_game.game_summary()
+
 
 if __name__ == "__main__":
     main()

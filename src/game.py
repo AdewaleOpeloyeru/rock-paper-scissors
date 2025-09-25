@@ -1,6 +1,7 @@
 from player import HumanPlayer, ComputerPlayer
 
-class Game():
+
+class Game:
     def __init__(self, rounds=3):
         self.human = HumanPlayer()
         self.computer = ComputerPlayer()
@@ -25,15 +26,22 @@ class Game():
     def get_result(self):
         if self.human.choice == self.computer.choice:
             return "tie"
-        elif (self.human.choice == 'r' and self.computer.choice == 's') or \
-             (self.human.choice == 'p' and self.computer.choice == 'r') or \
-             (self.human.choice == 's' and self.computer.choice == 'p'):
+        elif (
+            (self.human.choice == "r" and self.computer.choice == "s")
+            or (self.human.choice == "p" and self.computer.choice == "r")
+            or (self.human.choice == "s" and self.computer.choice == "p")
+        ):
             return "won"
         else:
             return "lost"
 
     def game_summary(self):
-        print("\n[Game Summary] Your points: ", self.human.score, " | Computer points: ", self.computer.score)
+        print(
+            "\n[Game Summary] Your points: ",
+            self.human.score,
+            " | Computer points: ",
+            self.computer.score,
+        )
         if self.human.score > self.computer.score:
             print("Congratulations! You won the game!")
         elif self.human.score < self.computer.score:
