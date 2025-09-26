@@ -3,3 +3,6 @@ cov:
 
 fmt:
 	PYTHONPATH=$$(pwd) python3 -m black src tests
+
+play:
+	PYTHONPATH=$$(pwd) python3 src/main.py
