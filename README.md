@@ -5,7 +5,7 @@ This is a simple command-line Rock-Paper-Scissors game implemented in Python. It
 
 ## Object-Oriented Programming (OOP) in Python
 
-Key OOP Concepts Used
+### Key OOP Concepts Used <br/>
 **Classes:** The code defines classes such as Game and Player to represent the main components of the game. Classes are blueprints for creating objects.
 
 **Objects:** Instances of classes (e.g., a Player object) hold data and provide methods to interact with that data.
