@@ -8,10 +8,12 @@ This is a simple command-line Rock-Paper-Scissors game implemented in Python.
 1. **Open a terminal** and navigate to the project directory:
 
 2. **Run the game** using Python:
-	``` powershell
+    - powershell
+	```
 	python src/main.py
 	```
-	```bash
+    - bash
+	```
 	python3 src/main.py
 	```
 
