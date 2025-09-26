@@ -1,4 +1,4 @@
-from player import HumanPlayer, ComputerPlayer
+from src.player import HumanPlayer, ComputerPlayer
 
 
 class Game:
